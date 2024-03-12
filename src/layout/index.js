@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import routes from "../routes/index";
 import Header from "./Header";
 import Footer from "./Footer";
+import "../layout/styles.scss";
 const index = () => {
   // route 설정
   const menu = routes.map((route, index) => {
