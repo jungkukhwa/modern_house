@@ -17,6 +17,8 @@ const Header = () => {
   const [activeMenuCateID, setActiveMenuCateID] = useState(null);
   const [active_Depth01_CateID, setActiveDepth01CateID] = useState("");
   const [active_Depth02_CateID, setActiveDepth02CateID] = useState("");
+  const [mainCategoryShow, setMainCategoryShow] = useState(false);
+  const [depth01Show, setDepth01Show] = useState(false);
   const [depth02Show, setDepth02Show] = useState(false);
   //searchHandle
   const searchHandle = (e) => {
@@ -49,6 +51,7 @@ const Header = () => {
       if (targetObject) {
         const subDepthArray = targetObject.sub_depth_01;
         setMainCategoryDepth01(subDepthArray);
+        setDepth01Show(true);
       } else {
         setMainCategoryDepth01([]);
       }
@@ -145,25 +148,38 @@ const Header = () => {
         </div>
         <div className="header_bottom_area">
           <div className="category_container">
-            <div className="category_btn">
+            <div
+              className="category_btn"
+              onMouseEnter={() => {
+                setMainCategoryShow(true);
+              }}
+            >
               <i></i>
               <span>카테고리</span>
             </div>
-            <div className="category_box">
+            <div
+              className="category_box"
+              style={mainCategoryShow ? {} : { display: "none" }}
+              onMouseLeave={() => {
+                setActiveMenuCateID(null);
+                setActiveDepth01CateID("");
+                setActiveDepth02CateID("");
+                setMainCategoryShow(false);
+              }}
+            >
               <div className="category_menu">
-                <ul
-                // onMouseOut={() => {
-                //   setActiveMenuCateID(null);
-                //   setActiveDepth01CateID("");
-                //   setActiveDepth02CateID("");
-                // }}
-                >
+                <ul>
                   {mainCategory.map((item) => (
                     <li
                       key={item.id}
                       className={activeMenuCateID === item.id ? "active" : ""}
-                      onMouseOver={() => {
+                      onMouseEnter={() => {
                         setActiveMenuCateID(item.id);
+                        setDepth01Show(true);
+                      }}
+                      onMouseLeave={() => {
+                        setActiveDepth01CateID("");
+                        setActiveDepth02CateID("");
                       }}
                     >
                       <a>{item.name}</a>
@@ -172,9 +188,16 @@ const Header = () => {
                 </ul>
               </div>
 
-              <div className="category_sub_menu_depth1">
+              <div
+                className="category_sub_menu_depth1"
+                style={
+                  activeMenuCateID !== null
+                    ? { display: "block" }
+                    : { display: "none" }
+                }
+              >
                 <ul
-                  onMouseOut={() => {
+                  onMouseLeave={() => {
                     if (!depth02Show) {
                       setActiveDepth01CateID("");
                     }
@@ -187,7 +210,7 @@ const Header = () => {
                       className={
                         active_Depth01_CateID === item.id ? "active" : ""
                       }
-                      onMouseOver={() => {
+                      onMouseEnter={() => {
                         setActiveDepth01CateID(item.id);
                       }}
                     >
@@ -204,7 +227,7 @@ const Header = () => {
                     ? { display: "none" }
                     : {}
                 }
-                onMouseOut={() => {
+                onMouseLeave={() => {
                   setActiveDepth02CateID("");
                 }}
               >
@@ -215,7 +238,7 @@ const Header = () => {
                       className={
                         active_Depth02_CateID === item.id ? "active" : ""
                       }
-                      onMouseOver={() => {
+                      onMouseEnter={() => {
                         setActiveDepth02CateID(item.id);
                         setDepth02Show(false);
                       }}
