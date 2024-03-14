@@ -1,0 +1,34 @@
+{
+  "Product": [
+    {
+      "id": 1, // 고유 id
+      "Main_Cate_Code": ["044"], // 메인 카테고리 코드
+      "Menu_Cate_Code": "024", // 메뉴 카테고리 코드
+      "name": "닐튼 전면책상 H1900", // 제품 이름
+      "price": 199000, // 정가
+      "sellprice": 99000, //판매가
+      "discount": 50, // 할인율
+      "thumb_img": [
+        { "thumb1": "../../../assets/images/product/1/thumb1.gif" },
+        { "thumb1": "../../../assets/images/product/1/thumb2.jpg" },
+        { "thumb1": "../../../assets/images/product/1/thumb3.jpg" }
+      ], // 썸네일 이미지
+      "main_img": [{ "main": "../../../assets/images/product/1/main.jpg" }] // 메인 이미지
+    },
+    {
+      "id": 2, // 고유 id
+      "Main_Cate_Code": ["01101", "036"], // 메인 카테고리 코드
+      "Menu_Cate_Code": "01101", // 메뉴 카테고리 코드
+      "name": "ON 높이조절 차르르 쉬폰커튼_화이트 140x235 1개 (핀포함)", // 제품 이름
+      "price": 89900, // 정가
+      "sellprice": 49500, //판매가
+      "discount": 44, // 할인율
+      "thumb_img": [
+        { "thumb1": "../../../assets/images/product/2/thumb1.gif" },
+        { "thumb1": "../../../assets/images/product/2/thumb2.jpg" },
+        { "thumb1": "../../../assets/images/product/2/thumb3.jpg" }
+      ], // 썸네일 이미지
+      "main_img": [{ "main": "../../../assets/images/product/2/main.jpg" }] // 메인 이미지
+    }
+  ]
+}

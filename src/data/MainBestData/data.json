@@ -1,0 +1,15 @@
+{
+  "menu_category": [
+    { "name": "전체", "itemList": [1, 2] },
+    { "name": "당일출고", "itemList": [] },
+    { "name": "주방", "itemList": [] },
+    { "name": "패브릭", "itemList": [] },
+    { "name": "가구", "itemList": [] },
+    { "name": "키즈", "itemList": [] },
+    { "name": "린넨앤키친", "itemList": [] },
+    { "name": "욕실/생활", "itemList": [] },
+    { "name": "홈데코", "itemList": [] },
+    { "name": "수납/정리", "itemList": [] },
+    { "name": "가전/라이프", "itemList": [] }
+  ]
+}
