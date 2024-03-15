@@ -7,6 +7,7 @@ import MainSwiper from "../../components/Swiper";
 import MainInnerBox from "../../components/Main_inner_box/index";
 
 import MainBestData from "../../data/MainBestData/data.json";
+import Products from "../../data/Product/data.json";
 
 import Banner01 from "../../assets/images/main_banner/신규가입.jpg";
 import Banner02 from "../../assets/images/main_banner/패브릭가구랭킹.jpg";
@@ -17,6 +18,7 @@ const HomePage = () => {
 
   // Main 지금 뜨고 있는 베스트
   const [categorymenuActive, setCategorymenuActive] = useState("전체");
+  const [categoryitems, setCategoryitems] = useState([]);
 
   useEffect(() => {
     //Main Swiper에 넘겨줄 slide data 정보
@@ -120,6 +122,26 @@ const HomePage = () => {
     setMainCateList(main_cate_list);
   }, []);
 
+  // 지금 뜨고 있는 베스트
+  useEffect(() => {
+    // 배열에서 name이 "a"인 객체를 찾음
+    const foundObject = MainBestData.menu_category.find(
+      (obj) => obj.name === categorymenuActive
+    );
+
+    // 해당 객체가 존재하고 itemList 배열이 있다면 추출
+    const itemsArray = foundObject ? foundObject.itemList : [];
+
+    // itemsArray 있는 숫자와 product 배열의 id가 일치하는 항목들을 모두 추출
+    const matchedItems = Products.Product.filter((item) =>
+      itemsArray.includes(item.id)
+    );
+
+    setCategoryitems(matchedItems);
+
+    // 카테고리 메뉴 바뀔 때마다 item list 변경
+  }, [categorymenuActive]);
+
   return (
     <div id="Home_page">
       <MainSwiper data={swiperData} />
@@ -148,14 +170,33 @@ const HomePage = () => {
           </Link>
         </div>
         {/* main banner 끝 */}
-        {/* main 지금 뜨고 있는 베스트*/}
-        <MainInnerBox
-          headerTitle="지금 뜨고 있는 베스트"
-          allShowLink="/"
-          categoryMenu={MainBestData.menu_category}
-          categorymenuActive={categorymenuActive}
-          categorymenuonChange={setCategorymenuActive}
-        />
+        {/* main 지금 뜨고 있는 베스트 시작*/}
+        {/* https://react-slick.neostack.com/docs/example/dynamic-slides */}
+        <div className="main_best_wrap">
+          <MainInnerBox
+            headerTitle="지금 뜨고 있는 베스트"
+            allShowLink="/"
+            categoryMenu={MainBestData.menu_category}
+            categorymenuActive={categorymenuActive}
+            categorymenuonChange={setCategorymenuActive}
+            itemList={categoryitems}
+          />
+        </div>
+        {/* main 지금 뜨고 있는 베스트 끝*/}
+        {/* main 고객님을 위한 맞춤 PICK! 시작 */}
+        {/* https://react-slick.neostack.com/docs/example/dynamic-slides */}
+        <div className="main_pick_wrap">
+          <MainInnerBox
+            headerTitle="고객님을 위한 맞춤 PICK!"
+            allShowLink="/"
+            categorymenuonChange={setCategorymenuActive}
+            itemList={categoryitems}
+          />
+        </div>
+        {/* main 고객님을 위한 맞춤 PICK! 끝 */}
+        {/* 따끈따끈한 신상품 시작 */}
+        {/* https://react-slick.neostack.com/docs/example/simple-slider */}
+        {/* 따끈따끈한 신상품 끝 */}
       </div>
     </div>
   );

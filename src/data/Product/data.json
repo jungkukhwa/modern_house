@@ -1,34 +1,130 @@
 {
   "Product": [
     {
-      "id": 1, // 고유 id
-      "Main_Cate_Code": ["044"], // 메인 카테고리 코드
-      "Menu_Cate_Code": "024", // 메뉴 카테고리 코드
-      "name": "닐튼 전면책상 H1900", // 제품 이름
-      "price": 199000, // 정가
-      "sellprice": 99000, //판매가
-      "discount": 50, // 할인율
+      "id": 1,
+      "Main_Cate_Code": ["044"],
+      "Menu_Cate_Code": "024",
+      "name": "닐튼 전면책상 H1900",
+      "price": 199000,
+      "sellprice": 99000,
+      "discount": 50,
+      "salecount": 100,
       "thumb_img": [
-        { "thumb1": "../../../assets/images/product/1/thumb1.gif" },
-        { "thumb1": "../../../assets/images/product/1/thumb2.jpg" },
-        { "thumb1": "../../../assets/images/product/1/thumb3.jpg" }
-      ], // 썸네일 이미지
-      "main_img": [{ "main": "../../../assets/images/product/1/main.jpg" }] // 메인 이미지
+        {
+          "thumb1": "http://happydailylife.co.kr/modern_house/product/1/thumb1.gif"
+        },
+        {
+          "thumb1": "http://happydailylife.co.kr/modern_house/product/1/thumb2.jpg"
+        },
+        {
+          "thumb1": "http://happydailylife.co.kr/modern_house/product/1/thumb3.jpg"
+        }
+      ],
+      "main_img": [
+        {
+          "main": "http://happydailylife.co.kr/modern_house/product/1/main.jpg"
+        }
+      ]
     },
     {
-      "id": 2, // 고유 id
-      "Main_Cate_Code": ["01101", "036"], // 메인 카테고리 코드
-      "Menu_Cate_Code": "01101", // 메뉴 카테고리 코드
-      "name": "ON 높이조절 차르르 쉬폰커튼_화이트 140x235 1개 (핀포함)", // 제품 이름
-      "price": 89900, // 정가
-      "sellprice": 49500, //판매가
-      "discount": 44, // 할인율
+      "id": 2,
+      "Main_Cate_Code": ["01101", "036"],
+      "Menu_Cate_Code": "01101",
+      "name": "ON 높이조절 차르르 쉬폰커튼_화이트 140x235 1개 (핀포함)",
+      "price": 89900,
+      "sellprice": 49500,
+      "discount": 44,
+      "salecount": 99,
       "thumb_img": [
-        { "thumb1": "../../../assets/images/product/2/thumb1.gif" },
-        { "thumb1": "../../../assets/images/product/2/thumb2.jpg" },
-        { "thumb1": "../../../assets/images/product/2/thumb3.jpg" }
-      ], // 썸네일 이미지
-      "main_img": [{ "main": "../../../assets/images/product/2/main.jpg" }] // 메인 이미지
+        {
+          "thumb1": "http://happydailylife.co.kr/modern_house/product/2/thumb1.jpg"
+        },
+        {
+          "thumb1": "http://happydailylife.co.kr/modern_house/product/2/thumb2.jpg"
+        },
+        {
+          "thumb1": "http://happydailylife.co.kr/modern_house/product/2/thumb3.jpg"
+        }
+      ],
+      "main_img": [{ "main": "/2/main.jpg" }]
+    },
+    {
+      "id": 3,
+      "Main_Cate_Code": ["01101", "036"],
+      "Menu_Cate_Code": "01101",
+      "name": "ON 젤라또 싱글 차렵이불 150x210 인절미+요거트 베이지+아이보리",
+      "price": 79900,
+      "sellprice": 29900,
+      "discount": 62,
+      "salecount": 98,
+      "thumb_img": [
+        {
+          "thumb1": "http://happydailylife.co.kr/modern_house/product/3/thumb1.jpg"
+        },
+        {
+          "thumb1": "http://happydailylife.co.kr/modern_house/product/3/thumb2.jpg"
+        },
+        {
+          "thumb1": "http://happydailylife.co.kr/modern_house/product/3/thumb3.jpg"
+        }
+      ],
+      "main_img": [
+        {
+          "main": "http://happydailylife.co.kr/modern_house/product/3/main.gif"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "Main_Cate_Code": ["01101", "036"],
+      "Menu_Cate_Code": "01101",
+      "name": "ON키즈피크닉 가든 폴딩우산의자 아이스크림",
+      "price": 25900,
+      "sellprice": null,
+      "discount": 0,
+      "salecount": 97,
+      "thumb_img": [
+        {
+          "thumb1": "http://happydailylife.co.kr/modern_house/product/4/thumb1.jpg"
+        },
+        {
+          "thumb1": "http://happydailylife.co.kr/modern_house/product/4/thumb2.jpg"
+        },
+        {
+          "thumb1": "http://happydailylife.co.kr/modern_house/product/4/thumb3.jpg"
+        }
+      ],
+      "main_img": [
+        {
+          "main": "http://happydailylife.co.kr/modern_house/product/4/main.jpg"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "Main_Cate_Code": ["01101", "036"],
+      "Menu_Cate_Code": "01101",
+      "name": "PESPES. 루키 확장형 캐리어 16형 커스터드 옐로우 기내용",
+      "price": 65900,
+      "sellprice": null,
+      "discount": 0,
+      "salecount": 96,
+      "thumb_img": [
+        {
+          "thumb1": "http://happydailylife.co.kr/modern_house/product/5/thumb1.jpg"
+        },
+        {
+          "thumb1": "http://happydailylife.co.kr/modern_house/product/5/thumb2.jpg"
+        },
+        {
+          "thumb1": "http://happydailylife.co.kr/modern_house/product/5/thumb3.jpg"
+        }
+      ],
+      "main_img": [
+        {
+          "main": "http://happydailylife.co.kr/modern_house/product/5/main.jpg"
+        }
+      ]
     }
   ]
 }

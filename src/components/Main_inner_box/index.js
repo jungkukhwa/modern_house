@@ -1,7 +1,14 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "../../components/Main_inner_box/styles.scss";
+import WishOff from "../../assets/images/icon/Product/icon_wish.png";
+import ItemBox from "../ItemBox/index";
 
 const Main_inner_box = (props) => {
+  // 10000 -> 10,000
+  function addCommas(num) {
+    return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  }
   return (
     <div className="Main_inner_box" style={props.boxStyle}>
       <h1>
@@ -33,7 +40,16 @@ const Main_inner_box = (props) => {
           </ul>
         </div>
       ) : null}
-      <div className="item_container"></div>
+      <div className="item_container">
+        <ul>
+          {props.itemList &&
+            props.itemList.map((item, idx) => (
+              <li key={idx}>
+                <ItemBox item={item} />
+              </li>
+            ))}
+        </ul>
+      </div>
     </div>
   );
 };

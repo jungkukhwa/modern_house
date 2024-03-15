@@ -1,0 +1,84 @@
+.item_box {
+  a {
+    text-decoration: none;
+    color: initial;
+    .item_img_box {
+      position: relative;
+      .item_number {
+        position: absolute;
+        top: 11px;
+        left: 11px;
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+        color: #fff;
+        font-weight: 700;
+        text-align: center;
+        line-height: 40px;
+        letter-spacing: normal;
+        border-radius: 50%;
+        background: #2fb8bd;
+        z-index: 10;
+      }
+      img {
+        display: block;
+        width: 230px;
+        height: 230px;
+        border-radius: 230px;
+      }
+    }
+    .item_info_box {
+      p {
+        display: -webkit-box;
+        font-size: 18px;
+        font-weight: 600;
+        letter-spacing: -0.05em;
+        line-height: 1.2;
+        white-space: normal;
+        word-wrap: normal;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        text-overflow: ellipsis;
+        overflow: hidden;
+      }
+      .item_price_box {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .discount_price_box {
+          display: flex;
+          align-items: end;
+          gap: 3px;
+        }
+        .discount {
+          padding-right: 7px;
+          font-size: 18px;
+          color: #fe5f57;
+          font-weight: 700;
+        }
+        .sellprice {
+          padding-right: 7px;
+          font-size: 18px;
+          font-weight: 700;
+          letter-spacing: -0.05em;
+          white-space: nowrap;
+        }
+        .price_sale_off {
+          padding-right: 7px;
+          font-size: 18px;
+          font-weight: 700;
+          letter-spacing: -0.05em;
+          white-space: nowrap;
+        }
+        .price_sale_on {
+          font-size: 15px;
+          color: #888;
+          white-space: nowrap;
+        }
+        img {
+          width: 21px;
+        }
+      }
+    }
+  }
+}

@@ -1,6 +1,5 @@
 .Main_inner_box {
   text-align: center;
-  padding-top: 110px;
   h1 {
     font-size: 42px;
     font-weight: 700;
@@ -30,7 +29,7 @@
     }
   }
   .category_menu {
-    padding: 70px 0;
+    padding: 70px 0 0 0;
     ul {
       display: flex;
       align-items: center;
@@ -50,6 +49,28 @@
           color: #fff;
           background: #2fb8bd;
         }
+      }
+    }
+  }
+  .item_container {
+    padding-top: 70px;
+    ul {
+      width: 100%;
+      display: flex;
+      gap: 25px;
+      overflow-x: scroll;
+      scroll-behavior: smooth;
+      /* 스크롤바의 폭 너비 */
+      &::-webkit-scrollbar {
+        width: 10px;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        border-radius: 10px; /* 스크롤바 둥근 테두리 */
+      }
+
+      &::-webkit-scrollbar-track {
+        background: rgba(220, 20, 60, 0.1); /*스크롤바 뒷 배경 색상*/
       }
     }
   }
