@@ -83,33 +83,9 @@ const HomePage = () => {
         link: "/",
       },
       {
-        id: 5,
-        name: "린넨앤키친",
-        image: require("../../assets/images/main_category_menu/린넨앤키친.png"),
-        link: "/",
-      },
-      {
-        id: 6,
-        name: "욕실・생활",
-        image: require("../../assets/images/main_category_menu/욕실생활.png"),
-        link: "/",
-      },
-      {
         id: 7,
         name: "홈데코",
         image: require("../../assets/images/main_category_menu/홈데코.png"),
-        link: "/",
-      },
-      {
-        id: 8,
-        name: "수납・정리",
-        image: require("../../assets/images/main_category_menu/수납정리.png"),
-        link: "/",
-      },
-      {
-        id: 9,
-        name: "가전・라이프",
-        image: require("../../assets/images/main_category_menu/가전라이프.png"),
         link: "/",
       },
       {
