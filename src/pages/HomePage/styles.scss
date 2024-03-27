@@ -1,8 +1,8 @@
 #Home_page {
   .home_page_container {
-    margin: 0 15%;
     // 메인 카테고리 메뉴
     .main_cate_wrap {
+      margin: 0 15%;
       padding-top: 110px;
       ul {
         width: 100%;
@@ -30,6 +30,7 @@
 
     // 메인 배너
     .main_banner_wrap {
+      margin: 0 15%;
       padding-top: 110px;
       display: flex;
       align-items: center;
@@ -39,12 +40,18 @@
       }
     }
     // 메인 베스트 배너
-    .main_banner_wrap {
+    .main_best_wrap {
       padding: 110px 0 140px;
     }
     // 메인 맞춤 PICK! 배너
     .main_pick_wrap {
       padding: 110px 0 140px;
+      background: #f1f1f1;
+    }
+    // 메인 따끈따끈한 신상품
+    .main_new_wrap {
+      padding: 110px 0 140px;
+      background: #2fb8bd;
     }
   }
 }

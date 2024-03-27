@@ -9,10 +9,18 @@ const ItemBox = (props) => {
     return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
   }
   return (
-    <div className="item_box">
+    <div
+      className={props.boxOption === "circle" ? "item_box" : "item_box square"}
+    >
       <Link to="">
         <div className="item_img_box">
-          <span className="item_number">{"0" + props.item.id}</span>
+          {props.idx ? (
+            <span className="item_number">
+              {props.idx
+                ? JSON.stringify(props.idx).replace(/^(\d)$/, "0$1")
+                : null}
+            </span>
+          ) : null}
           <img src={props.item.thumb_img[0].thumb1} />
         </div>
         <div className="item_info_box">

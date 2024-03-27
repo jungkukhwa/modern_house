@@ -1,4 +1,21 @@
 .item_box {
+  width: 230px;
+  &.square {
+    padding: 6px 6px 20px;
+    border-radius: 18px;
+    background: #fff;
+    .item_img_box {
+      .item_number {
+        display: none;
+      }
+      img {
+        border-radius: 13px 13px 0 0;
+      }
+    }
+    .item_info_box {
+      padding: 0 10px;
+    }
+  }
   a {
     text-decoration: none;
     color: initial;

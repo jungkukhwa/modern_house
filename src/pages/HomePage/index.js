@@ -180,6 +180,8 @@ const HomePage = () => {
             categorymenuActive={categorymenuActive}
             categorymenuonChange={setCategorymenuActive}
             itemList={categoryitems}
+            slideOption="dynamic"
+            boxOption="circle"
           />
         </div>
         {/* main 지금 뜨고 있는 베스트 끝*/}
@@ -188,14 +190,25 @@ const HomePage = () => {
         <div className="main_pick_wrap">
           <MainInnerBox
             headerTitle="고객님을 위한 맞춤 PICK!"
-            allShowLink="/"
             categorymenuonChange={setCategorymenuActive}
             itemList={categoryitems}
+            slideOption="dynamic"
+            boxOption="square"
           />
         </div>
         {/* main 고객님을 위한 맞춤 PICK! 끝 */}
         {/* 따끈따끈한 신상품 시작 */}
         {/* https://react-slick.neostack.com/docs/example/simple-slider */}
+        <div className="main_new_wrap">
+          <MainInnerBox
+            boxStyle={{ color: "#fff" }}
+            headerTitle="따끈따끈한 신상품"
+            allShowLink="/"
+            categorymenuonChange={setCategorymenuActive}
+            itemList={categoryitems}
+            slideOption="simple"
+          />
+        </div>
         {/* 따끈따끈한 신상품 끝 */}
       </div>
     </div>
