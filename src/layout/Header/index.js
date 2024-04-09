@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import Routes from "../../routes/index";
 import "./styles.scss";
 import SearchBar from "../../components/SearchBar";
 
@@ -8,6 +9,7 @@ import Join from "../../assets/images/icon/Header/icon_join_.png";
 import Cart from "../../assets/images/icon/Header/icon_cart.png";
 import Call from "../../assets/images/icon/Header/icon_call.png";
 import MainData from "../../data/Category/Main/data.json";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const [search, setSearch] = useState("");
@@ -120,10 +122,10 @@ const Header = () => {
           <div className="header_icon_menu">
             <ul>
               <li>
-                <a>
+                <Link to="/auth/SignIn">
                   <img src={Login} alt="로그인" />
                   <span>로그인</span>
-                </a>
+                </Link>
               </li>
               <li>
                 <a>

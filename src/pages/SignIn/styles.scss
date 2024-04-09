@@ -1,0 +1,150 @@
+#loginWrap {
+  padding-top: 50px;
+  margin: 0 auto;
+  text-align: center;
+  max-width: 380px;
+  .title {
+    padding: 30px 0 20px;
+    text-align: center;
+    h2 {
+      font-size: 40px;
+      font-weight: bold;
+      font-family: Malgun Gothic, "맑은 고딕", sans-serif;
+      line-height: 1;
+      padding: 0;
+      margin: 0;
+    }
+    p {
+      padding-top: 7px;
+      font-size: 19px;
+    }
+  }
+  .login_tab {
+    .tab_title {
+      ul {
+        display: flex;
+        margin: 0;
+        padding: 0;
+        li {
+          width: 189px;
+          padding: 12px 0;
+          cursor: pointer;
+          &.active {
+            background: #28bab8;
+            color: #fff;
+          }
+        }
+      }
+    }
+    .tab_container {
+      input[type="text"] {
+        color: #bfbec0;
+        padding: 0 0 0 12px;
+        width: 100%;
+        height: 44px;
+        font-size: 16px;
+        line-height: 44px;
+        border: 2px solid #eee;
+        box-sizing: border-box;
+        &:focus,
+        &:active {
+          outline: none;
+        }
+      }
+      .save_id {
+        margin: 15px 0 0 0;
+        display: flex;
+        position: relative;
+        label {
+          padding: 0 0 0 30px;
+          cursor: pointer;
+          input[type="checkbox"] {
+            width: 0;
+            &:checked {
+              &::after {
+                width: 20px;
+                height: 20px;
+                background-size: 18px auto;
+                content: "";
+                display: block;
+                position: absolute;
+                top: 0;
+                left: 0;
+                background: url("../../assets/images/icon/Login/check_on.png");
+              }
+            }
+            &:not(:checked) {
+              &::after {
+                width: 20px;
+                height: 20px;
+                background-size: 18px auto;
+                content: "";
+                display: block;
+                position: absolute;
+                top: 0;
+                left: 0;
+                background: url("../../assets/images/icon/Login/check_off.png");
+              }
+            }
+          }
+        }
+      }
+      .login_btn {
+        display: block;
+        width: 100%;
+        height: 44px;
+        margin-top: 30px;
+        font-size: 18px;
+        color: #fff;
+        font-weight: 500;
+        text-align: center;
+        line-height: 44px;
+        background: #28bab8;
+        border: 0;
+      }
+      .sign_box {
+        ul {
+          padding: 0;
+          li {
+            display: inline-block;
+            padding: 0 10px;
+            position: relative;
+            font-size: 15px;
+            color: #717171;
+          }
+        }
+      }
+      .sns_login {
+        p {
+          position: relative;
+          font-size: 15px;
+          color: #d7d7d7;
+          font-weight: 500;
+          &::before {
+            position: absolute;
+            top: 6px;
+            left: 0;
+            width: 115px;
+            height: 1px;
+            background: #d7d7d7;
+            content: "";
+          }
+          &::after {
+            position: absolute;
+            top: 6px;
+            left: auto;
+            right: 0;
+            width: 115px;
+            height: 1px;
+            background: #d7d7d7;
+            content: "";
+          }
+        }
+        .sns_box {
+          display: flex;
+          gap: 10px;
+        }
+      }
+    }
+  }
+}
